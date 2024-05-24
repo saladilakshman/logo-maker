@@ -35,7 +35,12 @@ export const DialogElement = () => {
       <DialogContent sx={{ height: 400 }}>
         <Box sx={styles.dialog.buttonsgroup}>
           <Button
-            sx={styles.dialog.button}
+            sx={{
+              ...styles.dialog.button,
+              bgcolor:
+                icongroupselectiontext === "icons" ? "#212121" : "initial",
+              color: icongroupselectiontext === "icons" ? "white" : "inherit",
+            }}
             disableRipple
             onClick={(event) =>
               changeiconstypeonclick(event.target.textContent)
@@ -44,7 +49,15 @@ export const DialogElement = () => {
             icons
           </Button>
           <Button
-            sx={styles.dialog.button}
+            sx={{
+              ...styles.dialog.button,
+              bgcolor:
+                icongroupselectiontext === "color icons"
+                  ? "#212121"
+                  : "initial",
+              color:
+                icongroupselectiontext === "color icons" ? "white" : "inherit",
+            }}
             disableRipple
             onClick={(event) =>
               changeiconstypeonclick(event.target.textContent)
@@ -82,7 +95,7 @@ export const DialogElement = () => {
                     <Box
                       component="img"
                       alt=""
-                      loading="eager"
+                      loading="lazy"
                       src={`https://logoexpress.tubeguruji.com/png/${coloricon}`}
                       sx={styles.dialog.dialogpaper}
                     />

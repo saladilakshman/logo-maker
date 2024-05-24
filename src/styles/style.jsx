@@ -24,7 +24,7 @@ export const styles = {
   },
   colorcomponent: {
     slider: {
-      width: 300,
+      width: { xs: "100%", lg: 300 },
       "&.MuiSlider-root": {
         color: Colors.deepOrange[600],
         backgroundColor: "white",
@@ -58,7 +58,7 @@ export const styles = {
     },
     button: {
       textTransform: "capitalize",
-      "&:focus": { bgcolor: Colors.grey[900], color: "white" },
+      "&:hover": { color: Colors.grey[900] },
     },
     iconsgrid: {
       display: "grid",
