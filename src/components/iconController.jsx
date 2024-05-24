@@ -26,7 +26,7 @@ export const Iconcontroller = () => {
           {icon.includes("png") ? (
             <Box
               component="img"
-              src={`/png/${icon}`}
+              src={`https://logoexpress.tubeguruji.com/png/${icon}`}
               sx={{
                 width: "100%",
                 height: "100%",
