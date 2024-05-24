@@ -14,5 +14,14 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/png/, '/png')
       }
     }
-  }
+  },
+   build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 })
