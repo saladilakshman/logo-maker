@@ -9,6 +9,7 @@ export const Iconcontroller = () => {
     dispatch,
   } = useContext(Appstate);
   const ActiveLucideIcon = icons[icon];
+  console.log(icon);
   return (
     <Container>
       <Box sx={{ paddingBlockStart: 2 }}>
@@ -32,6 +33,7 @@ export const Iconcontroller = () => {
                 height: "100%",
                 objectFit: "contain",
               }}
+              onError={(e) => console.log(e.target.src)}
             />
           ) : (
             <ActiveLucideIcon />
