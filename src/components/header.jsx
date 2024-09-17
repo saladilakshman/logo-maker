@@ -36,7 +36,10 @@ export const Header = () => {
             size={issmalldevice ? "small" : "large"}
             onClick={async () => {
               const boxElement = document.getElementById("icon-preview-box");
-              await html2canvas(boxElement, { useCors: true })
+              await html2canvas(boxElement, {
+                useCors: true,
+                proxy: "https://logoexpress.tubeguruji.com",
+              })
                 .then((res) => {
                   const anchor = document.createElement("a");
                   anchor.href = res.toDataURL("image/png");
