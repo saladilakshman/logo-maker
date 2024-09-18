@@ -9,7 +9,6 @@ export const Iconcontroller = () => {
     dispatch,
   } = useContext(Appstate);
   const ActiveLucideIcon = icons[icon];
-  console.log(`/png/${icon}`);
   return (
     <Container>
       <Box sx={{ paddingBlockStart: 2 }}>
@@ -27,13 +26,13 @@ export const Iconcontroller = () => {
           {icon.includes("png") ? (
             <Box
               component="img"
-              src={`/png/${icon}`}
+              src={icon}
               sx={{
                 width: "100%",
                 height: "100%",
                 objectFit: "contain",
               }}
-              onError={(e) => console.log(e.target.src)}
+             
             />
           ) : (
             <ActiveLucideIcon />

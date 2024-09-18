@@ -37,14 +37,14 @@ export const Header = () => {
             onClick={async () => {
               const boxElement = document.getElementById("icon-preview-box");
               await html2canvas(boxElement, {
-                useCors: true,
-                proxy: "https://logoexpress.tubeguruji.com",
+                useCORS: true,
+                backgroundColor: null,
               })
                 .then((res) => {
                   const anchor = document.createElement("a");
                   anchor.href = res.toDataURL("image/png");
                   document.body.appendChild(anchor);
-                  anchor.download = `logoforge-${icon}.png`;
+                  anchor.download = `logoforge-${icon}`;
                   anchor.click();
                 })
                 .catch((err) => console.log(err.message));

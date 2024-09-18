@@ -6,7 +6,7 @@ import {
   Divider,
   Paper,
 } from "@mui/material";
-import { ColorIcons } from "../utils/coloricons";
+import * as ColorIcons from "../assets/index.js";
 import { IconsList } from "../utils/iconslist";
 import { icons } from "lucide-react";
 import { styles } from "../styles/style";
@@ -85,7 +85,7 @@ export const DialogElement = () => {
                   </Box>
                 );
               })
-            : ColorIcons.map((coloricon, index) => {
+            : Object.values({ ...ColorIcons }).map((coloricon, index) => {
                 return (
                   <Box
                     component={Paper}
@@ -96,7 +96,7 @@ export const DialogElement = () => {
                       component="img"
                       alt=""
                       loading="lazy"
-                      src={`https://logoexpress.tubeguruji.com/png/${coloricon}`}
+                      src={coloricon}
                       sx={styles.dialog.dialogpaper}
                     />
                   </Box>

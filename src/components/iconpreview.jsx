@@ -46,7 +46,7 @@ export const Iconpreview = () => {
           {icon.includes("png") ? (
             <Box
               component="img"
-              src={`/png/${icon}`}
+              src={icon}
               sx={{
                 width: iconsize,
                 height: "100%",
